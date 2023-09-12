@@ -1,155 +1,53 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
-/* App.css */
-/* 
-.App {
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.countdown-timer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  font-size: 1.5rem;
-}
-
-.countdown-timer div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  padding: 10px;
-  min-width: 60px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.countdown-timer div span {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.countdown-timer div + div {
-  margin-left: 10px;
-}
-
-
-.countdown-timer div:hover {
-  background-color: #333;
-  color: white;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+body, h1 {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: linear-gradient(135deg, #000 0%, #555 100%);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} */
-
-
-/* App.css */
-
-/* body {
-  background: linear-gradient(135deg, #000 0%, #555 100%);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  color: #fff;
-}
-
-.content {
-  background-color: rgba(0, 0, 0, 0.6); 
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-} */
-
-body {
-  background-color: #1e1e1e; /* Dark background color */
+  background-color: #1e1e1e;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #fff;
-  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .content {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 69px;
   font-weight: bold;
   text-align: center;
   color: #fff;
@@ -157,12 +55,6 @@ body {
   margin-bottom: 20px;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
 .countdown-timer {
   display: flex;
   justify-content: center;
@@ -193,19 +85,7 @@ h1 {
   margin-left: 10px;
 }
 
-/* Add a hover effect to the timer boxes */
 .countdown-timer div:hover {
   background-color: #555;
   transition: background-color 0.3s ease-in-out;
-}
-
-
-.title {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
-  margin-bottom: 20px;
 }

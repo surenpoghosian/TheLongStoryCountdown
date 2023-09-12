@@ -5,8 +5,14 @@ import CountdownTimer from './CountdownTimer';
 function App() {
   return (
     <div className="App">
-      <h1  className="title">The Long Story</h1>
-      <CountdownTimer />
+      <video autoPlay loop muted className="background-video">
+      <source src="/0725.mp4" type="video/mp4" />
+      </video>
+      
+      <div className='content'>
+        <span  className="title">The Long Story</span>
+        <CountdownTimer />
+      </div>      
     </div>
   );
 }
